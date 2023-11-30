@@ -17,4 +17,13 @@ public class TestDataReader {
 		return loginObject;
 		
 	}
+	
+	public static JSONObject appointmentDetails() throws IOException, ParseException {
+		JSONParser jsonParser = new JSONParser();
+		FileReader fileReader = new FileReader("./test-data/AppointmentDetails.json");
+		Object obj = jsonParser.parse(fileReader);
+		JSONObject appointmentObject = (JSONObject) obj; 
+		return appointmentObject;
+		
+	}
 }
